@@ -11,6 +11,10 @@
 
 	<div class="main-wrapper">
 
+    {{ if .Site.Params.skills.enable }}
+	{{ partial "skills.html" . }}
+    {{ end }}
+
     {{ if .Site.Params.summary.enable }}
 	{{ partial "summary.html" . }}
     {{ end }}
@@ -25,10 +29,6 @@
 
     {{ if .Site.Params.hackathons.enable }}
     {{ partial "hackathons.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.skills.enable }}
-	{{ partial "skills.html" . }}
     {{ end }}
 
 	</div><!--//main-body-->

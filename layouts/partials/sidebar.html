@@ -2,6 +2,10 @@
 
 		{{ partial "profile.html" . }}
 
+		{{ if .Site.Params.available.enable }}
+		{{ partial "available.html" . }}
+		{{ end }}
+
 		{{ if .IsTranslated }}
 		{{ partial "translate.html" . }}
 		{{ end }}
